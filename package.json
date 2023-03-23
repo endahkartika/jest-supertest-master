@@ -1,0 +1,36 @@
+{
+  "name": "supertestjest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "jest": {
+    "verbose": true,
+    "testSequencer": "./sequencer/testSequencer.js",
+    "coverageDirectory": "coverage/my_reports/",
+    "coverageReporters": [
+      "html",
+      "text"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "scripts": {
+    "test": "jest --reporters default jest-stare --coverage --detectOpenHandles --runInBand --testTimeout=60000",
+    "test:watch": "jest --verbose --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "jest": "^27.5.1",
+    "jest-serial-runner": "^1.2.1",
+    "jest-stare": "^2.5.0",
+    "supertest": "^6.1.6"
+  }
+}
